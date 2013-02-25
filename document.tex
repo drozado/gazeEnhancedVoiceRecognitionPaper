@@ -27,10 +27,80 @@
 This is the abstract
 
 \section{Introduction}
-This is an introduction with a cite to myself \cite{Rozado2012a}
+In computer science speech recognition refers to the computational translation of spoken words into text.
+
+Using speech to create or edit documents and e-mail offers the potential to be a faster a more natural way to interact
+with computers as well as a hands-free modality with obvious positive implications for handicapped users or
+scenarios were computer users have their hands engaged in other tasks (for example surgeons in the operating room).
+
+Although there has been a significant increase in the accuracy performance of speech recognition software, error
+rates still make the technology cumbersome to use for everyday interaction  and it still requires a relatively long
+learning curve to master it.
+
+The correction of errors can be carried out manually with a traditional keyboard and mouse to select and retype the
+misrecognized word. This modality can be perfectly valid for some scenarios, but this interaction modalities is not
+hands-free anymore.  Correcting misrecognized with voice is an alternative that while remaining hands-free is extremely
+error-prone and frustrating for users, especially when trying to correct ``difficult'' words or when being used by users
+with an accent.
+
+In this work, we propose the enhancement of speech recognition software with gaze tracking technology to speed up the
+correction of misrecognized words and to make speech recognition truly hands-free.
+
+A gaze tracking system tracks the point of regard (PoR) of the user on the screen by monitoring the users pupils while
+sitting in front of a computer \cite{Rozado2012a}.
+
+In the experimental part of his work, we compared three modalities of correcting misrecognized words during  a speech
+recognition task:
+\begin{itemize}
+  \item usage of the traditional keyboard and mouse
+  \item usage of voice
+  \item usage of gaze
+\end{itemize}
+
+
+
+\end{items}
+
+
 
 \section{Methodology}
-\subsection{Face Tracker}
+Methodology introduction
+
+\subsection{Eye Tracking}
+Eyes are used by humans to obtain information about the surroundings and to
+communicate information. When something attracts our attention, we position our
+gaze on it, thus performing a \textit{fixation}. A fixation usually has a
+duration of at least 150 milliseconds (ms). The fast eye movements that
+occur between fixations are known as \textit{saccades}, and they are used to
+reposition the eye so that the object of interest is projected onto the fovea.
+The direction of gaze thus reflects the focus of 
+\textit{attention} and also provides an indirect hint for \textit{intention}
+\cite{velichkovsky}.
+
+
+A video-based gaze tracking system seeks to find where a person is looking, i.e.
+the Point of Regard (PoR), using images obtained from the eye by one
+or more cameras. Most systems employ infrared
+illumination that is invisible to the human eye and hence it is not distracting
+for the user. Infrared light improves image contrast and produces a reflection
+on the cornea, known as corneal reflection or glint. Eye features such as the
+corneal reflections and the center of the pupil/iris can be used to estimate the
+PoR. Figure \ref{screenGazeTracker} shows a screenshot of an eye being tracked
+by the open-source ITU Gaze Tracker \cite{lowcostitugazetracker}. In this case,
+the center of the pupil and two corneal reflections are the features being
+tracked.
+
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=0.5\textwidth, height=30mm]{figures/screenGazeTracker.jpg}
+\vspace{-3mm}
+\end{center}
+\caption{\textbf{The Open Source ITU Gaze Tracker tracking one eye.} The
+features tracked in the image are the pupil center and two corneal reflections.}
+\label{screenGazeTracker}
+\end{figure}
+
 
 \subsection{Experimental Setup}
 This is a reference to Figure \ref{figureLabel}
