@@ -9,6 +9,9 @@
 %\usepackage{biblatex} 
 %\usepackage[pdftex]{graphicx}
 \usepackage{anysize}
+
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+
 \marginsize{3cm}{3cm}{2cm}{2.5cm}%l r t b
 
 \title{Gaze Enhanced Speech Recognition for Hands-Free HCI}
@@ -99,26 +102,100 @@ features tracked in the image are the pupil center and two corneal reflections.}
 
 
 \subsection{Experimental Setup}
-This is a reference to Figure \ref{figureLabel}
+The video at \url{http://www.youtube.com/watch?v=xdBoNsMthr8} provides a good overview of the
+experimental setup.
+
+\section{Results}
+The user study generated the results enumerated next.
+
+The average time  for each correction modality to achieve the target sentence is displayed in Figure \ref{timeFig}.
+A Levenes' test for equal variance for the 3 correction modalities failed ($p=2.1$). Hence, the results of the
+ANOVA analysis need to be interpreted with caution. The F-test produced a value of $F=17.43$, $p=1.44\e{-06}$.
+A Posthoc Bonferroni-Holm test indicated significant differences between the voice-mouse, gaze-mouse and gaze-voice
+modalities with $p=4.24\e{-06}$, $p=3.6\e{-05}$ and $p=0.02$, respectively. 
+ 
 
 \begin{figure}[ht]
 \begin{center}
 \vspace{-3mm}
-\includegraphics[width=0.95\textwidth,height=50mm]{figures/fileName.jpg}
+\includegraphics[width=0.95\textwidth,height=50mm]{figures/time.png}
 \end{center}
-\caption{\textbf{Title of caption.} Explanation of the figure.}
-\label{figureLabel}
+\caption{\textbf{Average Time Required to Achieve Target Sentence.} The figure displays the average time of the
+experimental trials required by each correction modality to reach the target sentence.}
+\label{timeFig}
 \end{figure}
 
 
-\section{Results}
-More plain text.
+Figure \ref{mouseDisplacement} shows the average displacement of the mouse during each experimental trial for each
+correction modality. Again, a Levene's test failed to find equal variance among experimental conditions. The ANOVA
+showed significant differences between groups,  $F=19.27$, $p=4.82\e{-07}$. A Posthoc Bonferroni-Holm test found
+significant differences between the gaze-mouse and voice-mouse modalities,  $p=4.95\e{-06}$,
+$p=3.8\e{-04}$ respectively but now between the gaze-voice modalities.
+
+
+\begin{figure}[ht]
+\begin{center}
+\vspace{-3mm}
+\includegraphics[width=0.95\textwidth,height=50mm]{figures/mouseDisplacement.png}
+\end{center}
+\caption{\textbf{Average Mouse Movement Amplitude.} The figure displays the average mouse movement amplitude (in pixels)
+required by each correction modality to reach the target sentence during the experimental trials.}
+\label{mouseDisplacement}
+\end{figure}
+
+The average number of keystrokes required from the subjects to achieve the target sentence by each correction modality
+during the experimental trials is shown in Figure \ref{keystrokes}. Again a Levene's test failed to assume equal
+variance. Nonetheless the ANOVA analysis showed statistically significant differences between the results of the
+difference correction modalities, $F=36.79$, $p=8.29\e{-11}$. 
+
+\begin{figure}[ht]
+\begin{center}
+\vspace{-3mm}
+\includegraphics[width=0.95\textwidth,height=50mm]{figures/keystrokes.png}
+\end{center}
+\caption{\textbf{Number of Keystrokes.} The figure displays the average mouse movement amplitude (in pixels)
+required by each correction modality to reach the target sentence during the experimental trials.}
+\label{keystrokes}
+\end{figure}
+
+
+Figure \ref{failFig} shows the average number of trials in which the user was unable to reach the target sentence in the
+allotted time of 60 seconds using the given correction modality. The Levene's test also failed to determine equal
+variance. The ANOVA analysis showed statistically significant differences between the results of the
+difference correction modalities, $F=17.92$, $p=1.07\e{-06}$.   A Posthoc Bonferroni-Holm test found
+significant differences between the voice-mouse modalities, $p=6.62\e{-06}$, gaze-mouse modalities $p=9.23\e{-05}$
+and gaze-voice modalities $p=4.02\e{-03}$.
+
+\begin{figure}[ht]
+\begin{center}
+\vspace{-3mm}
+\includegraphics[width=0.95\textwidth,height=50mm]{figures/fail.png}
+\end{center}
+\caption{\textbf{Number of Failed Trials.} The figure displays the average number of trials in which the user
+was unable to reach the given target sentence within the allotted time of 60 seconds.}
+\label{failFig}
+\end{figure}
+
+The average DL distance between the target sentence and the generated sentence within the 60 seconds time window for
+each correction modality is shown in Figure \ref{dldistance}. The ANOVA analysis generated statistically
+significant differences between modalities with values $F=11.60$, $p=6.44\e{-05}$. A Posthoc Bonferroni-Holm test found
+significant differences between the voice-mouse modalities, $p=5.18\e{-04}$, gaze-voice modalities $p=4.44\e{-03}$
+and gaze-mouse modalities $p=1.71\e{-02}$. 
+
+\begin{figure}[ht]
+\begin{center}
+\vspace{-3mm}
+\includegraphics[width=0.95\textwidth,height=50mm]{figures/dldistance.png}
+\end{center}
+\caption{\textbf{DL Distance.} This figure shows the average DL distance between the target sentence and the generated
+sentence.}
+\label{dldistance}
+\end{figure}
+
 
 \section{Discussion}
 Bla bla
 
-\section{Conclusion}
-Bli bli bli
 
 \bibliographystyle{plain}
 \bibliography{library}
