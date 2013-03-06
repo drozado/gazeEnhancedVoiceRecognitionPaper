@@ -27,32 +27,45 @@
 \maketitle
 
 \section{Abstract}
-This is the abstract
+
+In this work, we present an innovative form of correcting misrecognized words during a speech recognition task by using
+gaze tracking technology. 
+
 
 \section{Introduction}
 In computer science speech recognition refers to the computational translation of spoken words into text.
-
 Using speech to create or edit documents and e-mail offers the potential to be a faster a more natural way to interact
 with computers as well as a hands-free modality with obvious positive implications for handicapped users or
 scenarios were computer users have their hands engaged in other tasks (for example surgeons in the operating room).
 
 Although there has been a significant increase in the accuracy performance of speech recognition software, error
-rates still make the technology cumbersome to use for everyday interaction  and it still requires a relatively long
-learning curve to master it.
+rates still make the technology cumbersome to use for everyday interaction and functional speech recognition still
+requires a relatively long learning curve on the part of the user to properly master it. Still, misrecognized words
+occur often during speech recognition tasks even for advanced users. 
 
-The correction of errors can be carried out manually with a traditional keyboard and mouse to select and retype the
-misrecognized word. This modality can be perfectly valid for some scenarios, but this interaction modalities is not
-hands-free anymore.  Correcting misrecognized with voice is an alternative that while remaining hands-free is extremely
-error-prone and frustrating for users, especially when trying to correct ``difficult'' words or when being used by users
-with an accent.
+The correction of speech recognition errors or misrecognized words can be carried out manually with a traditional
+keyboard and mouse to select and retype the correct word. The usage  of the keyboard and mouse to correct misrecognized
+words  during the speech recognition is probably  the most widely used  method for the task. This modality can be
+perfectly valid for some scenarios, but this interaction modalities is not trully hands-free anymore.
 
+
+The usage of voice for correction of misrecognized towards  during the speech recognition maintains the notion of truly
+hands-free input to the computer. In practice however, this modality can be very frustrating for the user since
+``certain" difficult words are extremely difficult to be properly recognized by speech recognition engines. Hence, this
+correction modality is extremely error-prone and frustrating for users. Users with a foreign accent also struggle with
+this particular form of interaction. Furthermore repeating several times the same word makes the vocal cords go through
+the same pattern of folding and vibrations repeatedly which has been shown to lead to voice strain \cite{}.
+
+ 
 In this work, we propose the enhancement of speech recognition software with gaze tracking technology to speed up the
-correction of misrecognized words and to make speech recognition truly hands-free.
+correction of misrecognized words and to make speech recognition truly hands-free. A gaze tracking system tracks the
+point of regard (PoR) of the user on the screen by monitoring the users pupils while sitting in front of a computer
+\cite{Rozado2012a}. In this modality, the user is required to simply gaze at the misrecognized word and then simply
+select  the correct alternate  word from an emerging panel for pronounced the word  again the correct option from the
+updated on just  by looking at it.
 
-A gaze tracking system tracks the point of regard (PoR) of the user on the screen by monitoring the users pupils while
-sitting in front of a computer \cite{Rozado2012a}.
 
-In the experimental part of his work, we compared three modalities of correcting misrecognized words during  a speech
+The experimental part of his work compares the three modalities of correcting misrecognized words during  a speech
 recognition task:
 \begin{itemize}
   \item usage of the traditional keyboard and mouse
@@ -61,6 +74,15 @@ recognition task:
 \end{itemize}
 
 
+
+%Matheus here you should include the review of the literature
+
+
+In summary, we present here a multimodal approach to HCI that combines speech recognition with gaze 
+interaction for correction of misrecognized words to create a truly hands-free paradigm of inputting text into a
+computer. Finally, we explore through a comprehensive user study how this multimodal paradigm compares to the 2
+traditional modalities to correct misrecognized words, using voice alone and using the mouse and the keyboard, in terms
+of completion task rate, accuracy rate.
 
 \section{Methodology}
 Methodology introduction
@@ -85,7 +107,7 @@ for the user. Infrared light improves image contrast and produces a reflection
 on the cornea, known as corneal reflection or glint. Eye features such as the
 corneal reflections and the center of the pupil/iris can be used to estimate the
 PoR. Figure \ref{screenGazeTracker} shows a screenshot of an eye being tracked
-by the open-source ITU Gaze Tracker \cite{lowcostitugazetracker}. In this case,
+by the open-source ITU Gaze Tracker \cite{lowcostitugazetracker,Rozado2012}. In this case,
 the center of the pupil and two corneal reflections are the features being
 tracked.
 
@@ -128,9 +150,9 @@ experimental trials required by each correction modality to reach the target sen
 
 Figure \ref{mouseDisplacement} shows the average displacement of the mouse during each experimental trial for each
 correction modality. Again, a Levene's test failed to find equal variance among experimental conditions. The ANOVA
-showed significant differences between groups,  $F=19.27$, $p=4.82\e{-07}$. A Posthoc Bonferroni-Holm test found
-significant differences between the gaze-mouse and voice-mouse modalities,  $p=4.95\e{-06}$,
-$p=3.8\e{-04}$ respectively but now between the gaze-voice modalities.
+showed significant differences between groups,  $F=25.06$, $p=2.0\e{-08}$. A Posthoc Bonferroni-Holm test found
+significant differences between the gaze-mouse and voice-mouse modalities,  $p=1.48\e{-05}$,
+$p=1.48\e{-05}$ respectively.
 
 
 \begin{figure}[ht]
@@ -194,7 +216,31 @@ sentence.}
 
 
 \section{Discussion}
-Bla bla
+The results of the user study showed that the gaze enhanced correction modality for multimodal speech recognition is not
+as fast as using the mouse and the keyboard for correcting misrecognized words. Yet, the gaze modality is
+significantly faster that using voice alone for correction and it is trully hand-free as opposed to the Mouse\&Keyboard
+modality that required the usage of the hands for correction misrecognized words.
+
+The amount of mouse movement displacement to achieve the target sentence was obviously non-existant for the gaze and
+voice correction modalities due to their true hands-free nature. The same can be say of the amount of keystrokes presses
+required for correction.
+
+In terms of the number of failures registered during the experimental trials to achieve the target sentence, the gaze
+modality was significantly better at reaching the target sentence that the voice modality but worse than the mouse \&
+keyboard modality. This was also evident in the DL distance between the target sentence and the achieved sentence during
+the experimental trials.
+
+In conclusion, the gaze modality for correction of recognized words is not as efficient in terms of accuracy and time to
+completion as the traditional mouse \& keyboard modality but it possesses the advantage of being truly hand-free with
+obvious  implications for handicapped computer users, users suffering from RSI syndrome and for scenarios where the
+usage of the hands is not possible (surgery room for instance). Moreover, the gaze modality significantly outperforms
+the other hand-free modality to correct misrecognized words, using voice, in all the variable being monitor in the user
+study. Furthermore, the gaze based correction modality also prevents the appearance of voice strain for the correction
+of misrecognized words since it prevents the  repetition of utterances of a certain word.
+
+The evidence from the results presented here suggest the advantages of this multimodal approach to HCI that complements
+speech recognition with gaze tracking and gaze interaction to create a truly hands-free multimodal interface that is
+faster and more accurate than using voice alone to correct misrecognized words.
 
 
 \bibliographystyle{plain}
