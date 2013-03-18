@@ -81,17 +81,16 @@ words among others \cite{Goldwater2010181}.
 
 
 The correction of speech recognition errors or misrecognized words can be carried out manually with a traditional
-keyboard and mouse to select the misrecognized word and retype it. The usage  of the keyboard and mouse to correct
-misrecognized words  during speech recognition is probably the most widely used method for the task. This modality can
-be perfectly valid for some scenarios, but this correction modality is not truly hands-free anymore.
+keyboard and mouse to select the misrecognized word and retype it, which is probably the most widely used method for the task. This modality can
+be perfectly valid for some scenarios, but it is not truly hands-free anymore.
 
 
 The usage of voice for correction of misrecognized words during speech recognition maintains the notion of exclusively
 hands-free input to the computer. In practice however, this modality can be very frustrating for the user since
 ``certain" challenging words are extremely difficult to be properly recognized by speech recognition engines. Hence,
-this correction modality is extremely error-prone and frustrating for users since the user has to first select by voice
-the wrong word, then repeat over and over again the right words until it is properly recognized, and then choosing it
-from a list of similar alternatives. Since all of this has to be done by voice, errors are frequent. Users with a
+this correction modality is extremely error-prone and frustrating for users considering the user has to first select by voice
+the wrong word, then repeat over and over again the right word until it is properly recognized, and then choosing it
+from a list of similar alternatives. As all of this has to be done by voice, errors are frequent. Users with a
 foreign accent struggle markedly with this form of interaction. Furthermore, repeating several times the same word makes
 the vocal cords go through the same pattern of folding and vibrations repeatedly which has been shown to cause voice
 strain \cite{voiceproblems}.
@@ -101,7 +100,7 @@ In this work, we propose the enhancement of speech recognition software with gaz
 correction of misrecognized words and to maintain speech recognition truly hands-free. A gaze tracking system tracks the
 point of regard (PoR) of the user on the screen by monitoring the users pupils while sitting in front of a computer
 \cite{Rozado2012a}. With the proposed modality, the user is required to simply gaze at the misrecognized word and then
-simply select the correct word from a gaze dependent emerging panel of most likely alternative words. If the correct
+select the correct word from a gaze dependent emerging panel of most likely alternative words. If the correct
 word is not in the panel of alternative words, the user has the chance of trying to utter it again. The correct word is
 selected from the panel just by looking at it.
 
@@ -174,7 +173,7 @@ based approach, connectionist approach, and using support vector machines. Ghai 
 in their work \cite{GhaiSingh}.
 
 
-The speaking mode is an important factor that has to be considered in ASR systems, since its constraints require
+The speaking mode is also an important factor that has to be considered in ASR systems, since its constraints require
 different designs. An isolated word speech recognition (IWR) assumes that one single word with well defined beginning
 and ending points is being uttered, which imposes great limitations on ASR. In order to deal with several words
 separated by pauses, connected word recognition (CWR) should be considered. Continuous speech recognition (CSR) deals
@@ -223,7 +222,7 @@ physical effort required to complete the task.
 
 \section{Methodology}
 The goal of the user study was to compare the correction of misrecognized text using the gaze-based correction method
-with the voice and mouse and keyboard correction methods. For this purpose, a graphical user interface (GUI) was
+with the voice and mouse and keyboard correction methods in a previously not trained ASR system. For this purpose, a graphical user interface (GUI) was
 designed and implemented to be shown to the subjects for each one of the correction modalities. The video at
 \url{http://www.youtube.com/watch?v=xdBoNsMthr8} provides a good overview of the experimental setup and the different
 correction modalities being compared in the user study. We encourage the interested reader to view the video in order to
@@ -293,7 +292,8 @@ This task was repeated three times, one for each correction modality: gaze, voic
 of 30 dictated sentences for each subject. The sentences and the correction modality were randomly shuffled between
 experimental trials in order to smooth out ordering effects on the correction modalities performance. Previously to the
 beginning of each experimental trial, we ran a few test trials of each correction modality to make the
-subject comfortable with the interface.
+subject comfortable with the interface. Also, a new empty Windows speech recognition profile was created for each subject
+in order to avoid the previous trials to facilitate recognition of the sentences.
 
 
 The user interface, displayed in Figure \ref{guiExampleEdited} shows the correction modality, the target sentence and
@@ -302,14 +302,14 @@ words would be presented on the center of the screen. These words could be corre
 by the correction modality:
 \begin{itemize}
   \item Mouse and keyboard: When clicking on a word with the mouse, a correction panel would pop up showing a list
-  of 5 alternative words, which could also be selected by clicking. When the desired word was not presented as
+  of at most 5 alternative words, which could also be selected by clicking. When the desired word was not presented as
   an alternative, clicking again on the word would generate a line edit and allow the subject to type the desired word with the keyboard;
   \item Voice: A correction panel was raised by saying the command ``correct" followed by the
   desired word to correct. In this mode, alternative words presented in the correction panel are preceded by a number that, when pronounced,
   selects the corresponding word. When the desired correction was not presented in the correction panel, pronouncing
   again the word would refresh the menu with a new list of best-guess alternatives produced by the speech recognition engine.
   \item Gaze: Fixating on a word with gaze for a dwell time of 2 seconds would pop-up correction panel with the list of 
-  5 alternative words. Similarly, the alternative word could be selected by fixating the gaze for 2 seconds over it.
+  at most 5 alternative words. Similarly, the alternative word could be selected by fixating the gaze for 2 seconds over it.
   Pronouncing the word again would refresh the menu with new alternatives.
 \end{itemize}
 
@@ -346,7 +346,7 @@ seconds threshold. When correcting by mouse and keyboard, the mouse displacement
 recorded. Each sentence also was marked indicating whether the trial has failed or not.
 
 
-Also, both the pronounced and the target sentence were recorded, this data was later used to calculate the Damerau-Levenshtein
+Furthermore, both the pronounced and the target sentence were recorded, this data was later used to calculate the Damerau-Levenshtein
 distance \cite{Damerau1964} between them. This distance reveals how far two strings are from each other considering four
 basic operations: insertion, deletion, substitution of a single character, and transposition of two adjacent characters.
 
