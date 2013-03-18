@@ -14,7 +14,7 @@
 
 \marginsize{3cm}{3cm}{2cm}{2.5cm}%l r t b
 
-\title{Gaze Enhanced Speech Recognition for Truly Hands-Free and Efficient HCI}
+\title{Gaze Enhanced Speech Recognition for Truly Hands-Free and Efficient Text Input During HCI}
  
 \author{Matheus Portela}
 \author{David Rozado}
@@ -23,7 +23,7 @@
   Matheus Vieira Portela\\
   Mechatronics Engineering Student\\
   University of Brasilia, Brazil\\
-  \em{Scholar of CNPq}\\
+  \em{Scholar of CNPQ}\\
   \texttt{matheus.v.portela@gmail.com}\\
   \and
   David Rozado\\
@@ -48,21 +48,20 @@ channel variability and spontaneous speech. Humans can also better recognize sou
 grammatical information. The error rates of current speech recognition systems are frustrating for the humans using
 them. In this work, we present an innovative form of correcting misrecognized words during a speech recognition task by
 using gaze tracking technology. Specifically, we propose to use the user's gaze to point at misrecognized words during a
-speech recognition task and to select appropriate word alternatives also by gaze. We compare  the performance of this
+speech recognition task and to select appropriate word alternatives also using gaze. We compare  the performance of this
 multimodal approach to speech recognition with traditional modalities of correcting misrecognized words: usage of the
 mouse and the keyboard and usage of voice alone. The results of the user study show that while the proposed system is
-not as fast as using the mouse and the keyboard for correction, it remains a truly hands-free means of interaction with the
-computer with obvious advantages for certain types of users such as those who lack  motor mobility or dexterity of the
-hands or those suffering from repetitive strain injuries. The system is also advantageous for scenarios that prohibit or
-discourage the usage of the hands to interact with the computer. The gaze enhanced correction of misrecognized words
-also significantly outperforms the other truly hands-free correction modality: voice. This results suggest the advantage
-of the proposed gaze enhanced speech recognition modality to improve the speech recognition experience for a variety of
-users and scenarios.
+not as fast as using the mouse and the keyboard for correction, gaze enhanced correction remains a truly hands-free
+means of interaction with the computer with obvious advantages for certain types of users such as those who lack  motor
+mobility or dexterity of the hands or those suffering from repetitive strain injuries. The system is also advantageous
+for scenarios that prohibit or discourage the usage of the hands to interact with the computer. The gaze enhanced
+correction of misrecognized words also significantly outperforms the other truly hands-free correction modality: voice.
+These results evidence the advantages of the proposed gaze enhanced speech recognition modality to improve the speech
+recognition experience for a variety of users and scenarios.\\
 
 
-\section{Keywords}
-Eye tracking, gaze tracking, gaze aware interfaces, pervasive computing, speech recognition, multimodal interaction,
-human computer interaction, HCI, gaze responsive systems 
+\textbf{Keywords:} Eye tracking, gaze tracking, gaze aware interfaces, pervasive computing, speech recognition,
+multimodal interaction, human computer interaction, HCI, gaze responsive systems 
 
 
 \section{Introduction}
@@ -84,16 +83,18 @@ words among others \cite{Goldwater2010181}.
 The correction of speech recognition errors or misrecognized words can be carried out manually with a traditional
 keyboard and mouse to select the misrecognized word and retype it. The usage  of the keyboard and mouse to correct
 misrecognized words  during speech recognition is probably the most widely used method for the task. This modality can
-be perfectly valid for some scenarios, but this interaction modality is not truly hands-free anymore.
+be perfectly valid for some scenarios, but this correction modality is not truly hands-free anymore.
 
 
 The usage of voice for correction of misrecognized words during speech recognition maintains the notion of exclusively
 hands-free input to the computer. In practice however, this modality can be very frustrating for the user since
-``certain" difficult words are extremely difficult to be properly recognized by speech recognition engines. Hence, this
-correction modality is extremely error-prone and frustrating for users since the user has to often repeat over and over
-again the same words until it is properly recognized. Users with a foreign accent struggle markedly with this form of
-interaction. Furthermore, repeating several times the same word makes the vocal cords go through the same pattern of
-folding and vibrations repeatedly which has been shown to cause voice strain \cite{voiceproblems}.
+``certain" challenging words are extremely difficult to be properly recognized by speech recognition engines. Hence,
+this correction modality is extremely error-prone and frustrating for users since the user has to first select by voice
+the wrong word, then repeat over and over again the right words until it is properly recognized, and then choosing it
+from a list of similar alternatives. Since all of this has to be done by voice, errors are frequent. Users with a
+foreign accent struggle markedly with this form of interaction. Furthermore, repeating several times the same word makes
+the vocal cords go through the same pattern of folding and vibrations repeatedly which has been shown to cause voice
+strain \cite{voiceproblems}.
 
  
 In this work, we propose the enhancement of speech recognition software with gaze tracking technology to speed up the
@@ -185,7 +186,7 @@ uncertainty \cite{GhaiSingh}.
 
 
 Even with state-of-the-art approaches to ASR, external noise degrades considerably the quality of the recognition. Gong
-\cite{Gong1995261} presents several mathematical approaches that deals exclusively with improving recognition in noisy
+\cite{Gong1995261} presents several mathematical approaches that deal exclusively with improving recognition in noisy
 situations, specially the most successful technique: speech model compensation. Still in this area of research, Chan et
 al. \cite{Chan2001} proposed to use myo-electric signals to refine ASR in extremely noisy environments, with promising
 results.
@@ -221,11 +222,12 @@ physical effort required to complete the task.
 
 
 \section{Methodology}
-The goal of the user study was to compare the correction of misrecognized text using the gaze-based correction method with
-the voice and mouse and keyboard correction methods. For this purpose, a graphical user interface (GUI)
-was designed and implemented to be shown to the subjects for each one of the correction modalities. The video at
+The goal of the user study was to compare the correction of misrecognized text using the gaze-based correction method
+with the voice and mouse and keyboard correction methods. For this purpose, a graphical user interface (GUI) was
+designed and implemented to be shown to the subjects for each one of the correction modalities. The video at
 \url{http://www.youtube.com/watch?v=xdBoNsMthr8} provides a good overview of the experimental setup and the different
-correction modalities being compared in the user study.
+correction modalities being compared in the user study. We encourage the interested reader to view the video in order to
+gain a good understanding of the work presented here.
 
 
 \subsection{Eye Tracking}
@@ -251,8 +253,8 @@ corneal reflections are the features being tracked.
 \includegraphics[width=0.5\textwidth, height=40mm]{figures/screenGazeTracker.jpg}
 \vspace{-3mm}
 \end{center}
-\caption{\textbf{The Open Source ITU Gaze Tracker tracking one eye.} The
-features tracked in the image are the pupil center and two corneal reflections. These features I used by the gaze 
+\caption{\textbf{The Open Source ITU Gaze Tracker Tracking One Eye.} The
+features tracked in the image are the pupil center and two corneal reflections. These features are used by the gaze 
 estimation algorithms to determinine the PoR of the user on the screen.}
 \label{screenGazeTracker}
 \end{figure}
@@ -262,20 +264,20 @@ estimation algorithms to determinine the PoR of the user on the screen.}
 Speech is one of the most natural communication skills. Humans use the vocal tracts to produce sounds, the air as a
 communication channel, and the auditory system as a pass-band for frequencies in the 0-20kHz spectrum. The basic unit of
 speech are the \textit{phonemes} which, when sequenced, are decoded as words by another person. However, the
-pronunciation of phonemes leads to \textit{coarticulation}, i.e., to utter them without an intervening pause, what
+pronunciation of phonemes leads to \textit{coarticulation}, i.e., to utter them without an intervening pause, which
 affects the neighbor phonemes in several ways \cite{Douglas2008}.
 
 
-In order to perform recognition, many pattern recognition techniques have been employed. When words are uttered, hidden
-Markov models compare the collected data to a set of probabilistic density functions (PDFs) of \textit{acoustic models}
-and select the one with highest probability. Afterwards, the result is integrated to \textit{language models}, which
+In order to perform recognition, many pattern recognition techniques have been employed. When words are uttered, Hidden
+Markov Models (HMM) compare the collected data to a set of probabilistic density functions (PDFs) of \textit{acoustic
+models} and select the one with highest probability. Afterwards, the result is integrated to \textit{language models}, which
 incorporates syntax and semantics to ASR \cite{Douglas2008}.
 
 
 \subsection{Participants}
-Nineteen participants took part in the user study. Among them, there was 10 native English speakers and 9 non-native
-English speakers (male and female). This is mentioned to account for the fact that speech recognition performance varies
-significantly between native and non-native speakers.
+Nineteen participants took part in the user study. Among them, there were 10 native English speakers and 9 non-native
+English speakers (17 male and 2 female). This is mentioned to account for the fact that speech recognition performance
+varies significantly between native and non-native speakers.
 
 
 \subsection{Apparatus}
@@ -286,29 +288,29 @@ the gaze, a Tobii X1 Gaze Tracker was used together with the Tobii SDK 3.0 RC1 f
 
 
 \subsection{Experimental task}
-Each participant was requested to try dictating 10 sentences with an allotted time of one minute maximum per sentence.
+Each participant was requested to dictate 10 sentences with an allotted time of 60 seconds per sentence.
 This task was repeated three times, one for each correction modality: gaze, voice and mouse and keyboard making a total
-of 30 dictated sentences for each subject. The sentences and the correction modality were randomly assigned from a
-previously written dataset in order to smooth out ordering effects of the correction modalities in speech adaptation.
-Previews to the beginning of each experimental trial, we ran a few test trials of each correction modality for each
-subject to make the subject comfortable with the interface.
+of 30 dictated sentences for each subject. The sentences and the correction modality were randomly shuffled between
+experimental trials in order to smooth out ordering effects on the correction modalities performance. Previously to the
+beginning of each experimental trial, we ran a few test trials of each correction modality to make the
+subject comfortable with the interface.
 
 
-The user interface, displayed in Figure \ref{guiExampleEdited} shows the correction modality, the target
-sentence and the number of the trial (from 1 to 30), on the top of the screen. When a speech utterance was recognized by the ASR,
-the words would be presented on the center of the screen. These words could be corrected in three different ways,
-determined by the correction modality:
+The user interface, displayed in Figure \ref{guiExampleEdited} shows the correction modality, the target sentence and
+the number of the trial (from 1 to 30), on the top of the screen. When a speech utterance was recognized by the ASR, the
+words would be presented on the center of the screen. These words could be corrected in three different ways, determined
+by the correction modality:
 \begin{itemize}
-  \item Mouse and keyboard: When clicking on a word with the mouse, a pop-up menu would be shown with similar words, 
-  which could also be selected by clicking. When the desired word was not presented as an alternative, clicking again on 
-  the word would generate a line edit and allow the subject to type the desired word with the keyboard;
-  \item Voice: A pop-up menu could be generated by saying the command ``correct" followed by the desired word to correct. 
-  In this mode, alternative words are preceded by a number that, when pronounced, selects the corresponding word. When 
-  the desired correction was not presented in the pop-up menu, pronouncing again the word would refresh the menu with a 
-  new list of best-guess alternatives produced by the speech recognition engine.
-  \item Gaze: Fixating on a word for a dwell time of 2 seconds would generate the pop-up menu with alternatives. 
-  Similarly, the alternative word could be selected by fixating the gaze for 2 seconds. Pronouncing again the word would 
-  refresh the menu with new alternatives.
+  \item Mouse and keyboard: When clicking on a word with the mouse, a correction panel would pop up showing a list
+  of 5 alternative words, which could also be selected by clicking. When the desired word was not presented as
+  an alternative, clicking again on the word would generate a line edit and allow the subject to type the desired word with the keyboard;
+  \item Voice: A correction panel was raised by saying the command ``correct" followed by the
+  desired word to correct. In this mode, alternative words presented in the correction panel are preceded by a number that, when pronounced,
+  selects the corresponding word. When the desired correction was not presented in the correction panel, pronouncing
+  again the word would refresh the menu with a new list of best-guess alternatives produced by the speech recognition engine.
+  \item Gaze: Fixating on a word with gaze for a dwell time of 2 seconds would pop-up correction panel with the list of 
+  5 alternative words. Similarly, the alternative word could be selected by fixating the gaze for 2 seconds over it.
+  Pronouncing the word again would refresh the menu with new alternatives.
 \end{itemize}
 
 
@@ -317,20 +319,21 @@ determined by the correction modality:
 \includegraphics[width=0.75\textwidth]{figures/guiExampleEdited.jpg}
 \end{center}
 \caption{\textbf{GUI Used in the Experiments.} This figure shows highlighted in different colors the different parts 
-composing the user interface exposed to the subjects participating in the user study.}
+composing the user interface exposed to the subjects while participating in the user study.}
 \label{guiExampleEdited}
 \end{figure}
 
 
-On the bottom of the screen, three options buttons were available when a word was being corrected, i.e., with the pop-up
-menu opened: ``Close correction", which would close the pop-up menu of alternative words to substitute a misrecognized
-word, ``Remove", that would delete the word, and ``Delete sentence", which would delete the entire recognized sentence.
-Also, a ``Next" button would become active when the recognized sentence matched the target sentence or when the
-allotted. When the user had correctly pronounced the desired sentence, the ``Next" button and the target sentence would
-become green to indicate that the user could go to the next trial. However, if the desired sentence was not reached in
-less than 60 seconds, the ``Next" button and the target sentence would become red, indicating that the user has failed
-to correct the sentence in suitable time and could start the next trial. All these buttons could be activated either by
-using the mouse or the active given correction modality.
+On the bottom of the screen, three options buttons were available when a word was being corrected, i.e., with the
+correction panel opened: ``Close correction", which would close the correction panel menu of alternative words to
+substitute a misrecognized word, ``Remove", that would delete the word, and ``Delete sentence", which would delete the
+entire recognized sentence. A ``Next" button would become active when the recognized sentence matched the target
+sentence or when the allotted time of 60 seconds had been excedeed. When the user had correctly pronounced the desired
+sentence, the ``Next" button and the target sentence would become green to indicate that the user could go to the next
+trial. However, if the desired sentence was not reached in less than 60 seconds, the ``Next" button and the target
+sentence would become red, indicating that the user has failed to correct the sentence in suitable time and could
+proceed to the next trial. All these buttons could be activated either by using the mouse or the active correction
+modality.
 
 At the end of the experiments, the subjects involved in the user study were required to fill a questionnaire asking them
 about their subjective experience with the different correction modalities.
@@ -339,15 +342,15 @@ about their subjective experience with the different correction modalities.
 \subsection{Measures}
 During the experiment, time to complete the task was measured.  Timing would stop when the active sentence being uttered
 and edited matched the target sentence or if the user failed to achieve the target sentence within the allotted 60
-seconds threshold. When correcting by mouse and keyboard, the mouse displacement and keystrokes were recorded.
-Each sentence also had a mark indicating whether the trial has failed or not.
+seconds threshold. When correcting by mouse and keyboard, the mouse displacement and number of keystrokes presses were
+recorded. Each sentence also was marked indicating whether the trial has failed or not.
 
 
 Also, both the pronounced and the target sentence were recorded, this data was later used to calculate the Damerau-Levenshtein
-distance \cite{Damerau1964} between them. This distance revels how far two strings are from each other considering four basic operations: insertion,
-deletion, substitution of a single character, and transposition of two adjacent characters.
+distance \cite{Damerau1964} between them. This distance reveals how far two strings are from each other considering four
+basic operations: insertion, deletion, substitution of a single character, and transposition of two adjacent characters.
 
-Lastly, the user questionnaire was composed by the following five questions, where the subject were able to answer
+Lastly, the user questionnaire was composed by the following five questions, where the subjects were able to answer
 either ``Traditional keyboard and mouse", ``Voice" or ``Gaze".
 
 
@@ -374,8 +377,8 @@ respectively.
 \includegraphics[width=0.9\textwidth,height=65mm]{figures/time.png}
 \end{center}
 \vspace{-3mm}
-\caption{\textbf{Average Time Required to Achieve Target Sentence.} The figure displays the average time that the different
-correction modalities required to reach the target sentence.}
+\caption{\textbf{Average Time Required to Achieve Target Sentence.} The figure displays the average time per trial that
+the speech recognition engine with different correction modalities required to reach the target sentence.}
 \label{timeFig}
 \end{figure}
 
@@ -393,7 +396,8 @@ $p=1.48\e{-05}$ respectively.
 \includegraphics[width=0.9\textwidth,height=65mm]{figures/mouseDisplacement.png}
 \end{center}
 \caption{\textbf{Average Mouse Movement Amplitude Required to Complete the Task.} The figure displays the average mouse
-movement amplitude in pixels required by each correction modality to reach the target sentence during the experimental trials.}
+movement amplitude in pixels per trial required by each correction modality to reach the target sentence during the
+experimental trials.}
 \label{mouseDisplacement}
 \end{figure}
 
@@ -409,8 +413,9 @@ difference correction modalities, $F(2,54)=36.79$, $p=8.29\e{-11}$.
 \vspace{-3mm}
 \includegraphics[width=0.9\textwidth,height=65mm]{figures/keystrokes.png}
 \end{center}
-\caption{\textbf{Number of Keystrokes Required to Complete the Task.} The figure displays the average mouse movement amplitude (in pixels)
-required by each correction modality to reach the target sentence during the experimental trials.}
+\caption{\textbf{Number of Keystrokes Required to Complete the Task.} The figure displays the average number of
+keystrokes presses required by each correction modality to reach the target sentence
+during the experimental trials.}
 \label{keystrokes}
 \end{figure}
 
@@ -428,7 +433,7 @@ $p=9.23\e{-05}$ and gaze-voice modalities $p=4.02\e{-03}$.
 \vspace{-3mm}
 \includegraphics[width=0.9\textwidth,height=65mm]{figures/fail.png}
 \end{center}
-\caption{\textbf{Number of Failed Trials.} The figure displays the average number of trials in which the user
+\caption{\textbf{Number of Failed Trials.} The figure displays the percentage of trials in which the user
 was unable to reach the given target sentence within the allotted time of 60 seconds.}
 \label{failFig}
 \end{figure}
@@ -443,11 +448,10 @@ $p=4.44\e{-03}$ and gaze-mouse\&keyboard modalities $p=1.71\e{-02}$.
 
 \begin{figure}[!ht]
 \begin{center}
-\vspace{-3mm}
 \includegraphics[width=0.9\textwidth,height=65mm]{figures/dldistance.png}
 \end{center}
-\caption{\textbf{Damerau-Levenshtein Distance.} This figure shows the average Damerau-Levenshtein distance between the 
-target sentence and the generated sentence.}
+\caption{\textbf{Damerau-Levenshtein Distance.} This figure shows the average Damerau-Levenshtein distance per
+trial between the target sentence and the generated sentence for the different correction modalities.}
 \label{dldistance}
 \end{figure}
 
@@ -461,7 +465,7 @@ modalities being compared through a user questionnaire, the results of which are
 \vspace{-3mm}
 \includegraphics[width=0.95\textwidth,height=65mm]{figures/questionnaire.png}
 \end{center}
-\caption{\textbf{User questionnaire.} Subjective opinions expressed by the subjects that participated in the user
+\caption{\textbf{User Questionnaire.} Subjective opinions expressed by the subjects that participated in the user
 study about their perceptions of the different modalities being compared to correct misrecognized words.}
 \label{questionnaire}
 \end{figure}
@@ -469,24 +473,25 @@ study about their perceptions of the different modalities being compared to corr
 
 \section{Discussion}
 The results of the user study showed that the gaze enhanced correction modality for a speech recognition task is not as
-fast as using the mouse and the keyboard for correcting misrecognized words. Yet, the gaze modality is significantly
-faster that using voice alone for correction and it is truly hand-free as opposed to the Mouse\&Keyboard modality that
-required the usage of the hands for correction of misrecognized words. The time performance of the gaze enhanced speech
-recognition can be improved in future researches by implementing more sophisticated selection methods, replacing the 2
+fast as using the mouse and the keyboard for correcting misrecognized words. Yet, the gaze based correction modality is
+significantly faster than using voice alone for correction and it is truly hand-free as opposed to the Mouse\&Keyboard
+modality that required the usage of the hands for correction of misrecognized words. The time performance of the gaze enhanced speech
+recognition can be improved in future research by implementing more sophisticated selection methods, replacing the 2
 seconds fixation used in this work, by for instance dynamic and continuous selection of words just by looking at them. 
 This alone would most likely improve the speed performance of the gaze correction modality.
 
 
-The amount of mouse movement displacement required to achieve the target sentence was obviously non-existent for the gaze and
-voice correction modalities due to their true hands-free nature. The same can be say of the amount of keystrokes presses
-required for correction. The gaze and voice correction modalities are obviously advantageous in this regard, since they
-completely eliminate the need of the physical effort associated to mouse movements and keystrokes presses. This is particularly
-beneficial for users with limited or no movement control of the hands, limited dexterity, users suffering from
-repetitive strain injury (RSI) and for scenarios that prohibit or discourage hand-based interaction. Voice correction of
-misrecognized words however, can easily lead to voice strain. This is due to the accuracy limitations of speech
-recognition algorithms that make it necessary for the users to repeat several times the same word until it is correctly
-recognized. Gaze-based correction, on the other hand, does not suffer from any of the previously mentioned drawbacks of
-the alternative modalities.
+The amount of mouse movement displacement required to achieve the target sentence was obviously non-existent for the
+gaze and voice correction modalities due to their true hands-free nature. The same can be say of the amount of
+keystrokes presses required for correction of misrecognized words. The gaze and voice correction modalities are
+obviously advantageous in this regard, since they completely eliminate the need of the physical effort associated to
+mouse movements and keystrokes presses. This is particularly beneficial for users with limited or no movement control of
+the hands, limited dexterity, users suffering from repetitive strain injury (RSI) and for scenarios that prohibit or
+discourage hand-based interaction. Voice correction of misrecognized words however, can easily lead to voice strain.
+This is due to the accuracy limitations of speech recognition algorithms that make it necessary for the users to repeat
+several times voice commands and utterance of the target word until the appropriate word is properly situated into its
+target position within the text. Gaze-based correction, on the other hand, does not suffer from any of the previously
+mentioned drawbacks of the alternative modalities.
 
 
 In terms of the number of failures registered during the experimental trials to achieve the target sentence, the gaze
@@ -495,7 +500,8 @@ keyboard modality. This was also evident in the Damerau-Levenshtein distance bet
 achieved sentence during the experimental trials. Here, it is important to emphasize that the most of the subjects
 involved in the user study had never been exposed to gaze tracking technology before. Hence, they did not have time to
 properly familiarize themselves with the technology. Given enough time to go through the learning curve of using gaze
-interaction would most likely allow learning effects to take place and improve the performance of these measurements.
+interaction would most likely allow learning effects to take place and improve the performance of the gaze based
+correction modality.
 
 
 The main limitation of the proposed modality is due to the constraints in gaze accuracy that any gaze estimation
