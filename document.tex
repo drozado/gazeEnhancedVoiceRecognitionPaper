@@ -308,8 +308,8 @@ by the correction modality:
   desired word to correct. In this mode, alternative words presented in the correction panel are preceded by a number that, when pronounced,
   selects the corresponding word. When the desired correction was not presented in the correction panel, pronouncing
   again the word would refresh the menu with a new list of best-guess alternatives produced by the speech recognition engine.
-  \item Gaze: Fixating on a word with gaze for a dwell time of 2 seconds would pop-up the correction panel with the list
-  of at most 5 alternative words. Similarly, the alternative word could be selected by fixating the gaze for 2 seconds over it.
+  \item Gaze: Fixating on a word with gaze for a dwell time of 2 seconds would pop-up correction panel with the list of 
+  at most 5 alternative words. Similarly, the alternative word could be selected by fixating the gaze for 2 seconds over it.
   Pronouncing the word again would refresh the menu with new alternatives.
 \end{itemize}
 
@@ -378,7 +378,7 @@ respectively.
 \end{center}
 \vspace{-3mm}
 \caption{\textbf{Average Time Required to Achieve Target Sentence.} The figure displays the average time per trial that
-the speech recognition engine using different correction modalities required to reach the target sentence.}
+the speech recognition engine with different correction modalities required to reach the target sentence.}
 \label{timeFig}
 \end{figure}
 
@@ -497,7 +497,7 @@ mentioned drawbacks of the alternative modalities.
 In terms of the number of failures registered during the experimental trials to achieve the target sentence, the gaze
 modality was significantly better at reaching the target sentence than the voice modality but worse than the mouse \&
 keyboard modality. This was also evident in the Damerau-Levenshtein distance between the target sentence and the
-achieved sentence during the experimental trials. Here, it is important to emphasize that most of the subjects
+achieved sentence during the experimental trials. Here, it is important to emphasize that the most of the subjects
 involved in the user study had never been exposed to gaze tracking technology before. Hence, they did not have time to
 properly familiarize themselves with the technology. Given enough time to go through the learning curve of using gaze
 interaction would most likely allow learning effects to take place and improve the performance of the gaze based
@@ -509,18 +509,20 @@ algorithm  has. Using the proposed system with the typical font size that averag
 be challenging since it would be difficult for the system to discern the particular word at which the user is gazing
 at. Hence, in our user studies we employed relatively large font sizes. Algorithms that would respond to gaze behavior
 in a context aware manner could aid in disambiguating where the user is intending to point to. This could be done by
-opening the correction panel in the word with the least amount of recognition confidence that is nearest to the gaze
-position. Innovative dynamic displays of alternative words could also help in this regard.
+opening the correction panel in the word nearest to the gaze position with the least amount of confidence in the
+recognition results. Innovative dynamic displays of alternative words could also help in this regard.
 
 
 In conclusion, the gaze modality for correction of misrecognized words is not as efficient in terms of accuracy and time
 to completion as the traditional mouse \& keyboard modality but it possesses the advantage of being truly hand-free with
 obvious  implications for handicapped computer users, users suffering from RSI syndrome and for scenarios where the
 usage of the hands is not possible (surgery room for instance). Moreover, the gaze modality significantly outperforms
-the other hand-free modality to correct misrecognized words, using voice, in all the variables being monitored in the
+the other hand-free modality to correct misrecognized words, using voice, in all the variable being monitored in the
 user study. Furthermore, the gaze based correction modality also prevents the appearance of voice strain for the
-correction of misrecognized words since it prevents considerably the amount of of speech utterances required to correct
-a word. In light of the evidence presented here, we assert the advantages of the proposed multimodal approach to HCI that
+correction of misrecognized words since it prevents considerably the amount of of utterances required to correct a word.
+
+
+In light of the evidence presented here, we assert the advantages of the proposed multimodal approach to HCI that
 complements speech recognition with gaze tracking and gaze interaction to create a truly hands-free multimodal interface
 for speech recognition tasks that is faster and more accurate than using voice alone to correct misrecognized words
 while remaining a truly hands-free form of interaction.
